@@ -1,0 +1,75 @@
+.col-2 {
+  padding: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #1a6ec5;
+}
+.input-group {
+  padding: 20px;
+}
+
+.parent {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.child-current {
+  text-align: center;
+}
+.child-next {
+  line-height: 35px;
+}
+#search-input {
+  margin: auto;
+  height: 40px;
+  width: 100%;
+  padding: 0.375 rem 0.75 rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2 px solid #ced4da;
+  border-radius: 15px;
+}
+.city {
+  font-size: 30px;
+  font-weight: 300;
+  color: #1a6ec5;
+}
+.date {
+  font-size: 20px;
+  font-weight: 300;
+  color: #1a6ec5;
+}
+.temperature {
+  font-size: 50px;
+  font-weight: bold;
+  color: #1a6ec5;
+}
+#celsius-link {
+  text-decoration: none;
+}
+#fahrenheit-link {
+  text-decoration: none;
+}
+.units {
+  position: relative;
+  top: -24px;
+}
+.high-low {
+  font-size: 20px;
+  font-weight: 300;
+  color: #1a6ec5;
+}
+.wind {
+  font-size: 20px;
+  font-weight: 300;
+  color: #1a6ec5;
+}
+.feelslike {
+  font-size: 20px;
+  font-weight: 300;
+  color: #1a6ec5;
+}
