@@ -66,6 +66,18 @@ function locationTemp(response) {
     response.data.main.temp
   );
   document.querySelector(".city").innerHTML = response.data.name;
+  document.querySelector(".high").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector(".low").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector(".wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector(".feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
 }
 navigator.geolocation.getCurrentPosition(showPosition);
 
