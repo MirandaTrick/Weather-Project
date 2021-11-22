@@ -34,7 +34,7 @@
   border-radius: 15px;
 }
 .city {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 300;
   color: #1a6ec5;
 }
@@ -44,7 +44,7 @@
   color: #1a6ec5;
 }
 .temperature {
-  font-size: 50px;
+  font-size: 70px;
   font-weight: bold;
   color: #1a6ec5;
 }
@@ -59,17 +59,17 @@
   top: -24px;
 }
 .high-low {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 300;
   color: #1a6ec5;
 }
 .wind {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 300;
   color: #1a6ec5;
 }
 .feelslike {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 300;
   color: #1a6ec5;
 }
