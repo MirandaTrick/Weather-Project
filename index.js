@@ -83,3 +83,177 @@ navigator.geolocation.getCurrentPosition(showPosition);
 
 let locationButton = document.querySelector(".current-location");
 locationButton.addEventListener("click", showPosition);
+
+function clickLondon(event) {
+  let apiKey = "a737be22247c67dd5d6a40a70996f13d";
+  let city = "London";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(londonResonse);
+}
+function londonResonse(response) {
+  document.querySelector(".temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector(".city").innerHTML = "London";
+  document.querySelector(".high").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector(".low").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector(".wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector(".feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+}
+
+let london = document.querySelector(".london");
+london.addEventListener("click", clickLondon);
+
+function clickNewYork(event) {
+  let apiKey = "a737be22247c67dd5d6a40a70996f13d";
+  let city = "New York";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(newYorkResonse);
+}
+function newYorkResonse(response) {
+  document.querySelector(".temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector(".city").innerHTML = "New York";
+  document.querySelector(".high").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector(".low").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector(".wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector(".feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+}
+
+let newYork = document.querySelector(".new-york");
+newYork.addEventListener("click", clickNewYork);
+
+function clickLima(event) {
+  let apiKey = "a737be22247c67dd5d6a40a70996f13d";
+  let city = "lima";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(limaResonse);
+}
+function limaResonse(response) {
+  document.querySelector(".temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector(".city").innerHTML = "Lima";
+  document.querySelector(".high").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector(".low").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector(".wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector(".feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+}
+
+let lima = document.querySelector(".lima");
+lima.addEventListener("click", clickLima);
+
+function clickTokyo(event) {
+  let apiKey = "a737be22247c67dd5d6a40a70996f13d";
+  let city = "Tokyo";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(tokyoResonse);
+}
+function tokyoResonse(response) {
+  document.querySelector(".temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector(".city").innerHTML = "Tokyo";
+  document.querySelector(".high").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector(".low").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector(".wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector(".feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+}
+
+let tokyo = document.querySelector(".tokyo");
+tokyo.addEventListener("click", clickTokyo);
+
+function clickSydney(event) {
+  let apiKey = "a737be22247c67dd5d6a40a70996f13d";
+  let city = "sydney";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(newYorkResonse);
+}
+function newYorkResonse(response) {
+  document.querySelector(".temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector(".city").innerHTML = "Sydney";
+  document.querySelector(".high").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector(".low").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector(".wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector(".feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+}
+
+let sydney = document.querySelector(".sydney");
+sydney.addEventListener("click", clickSydney);
+
+function clickCapeTown(event) {
+  let apiKey = "a737be22247c67dd5d6a40a70996f13d";
+  let city = "cape town";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(capeTownResonse);
+}
+function capeTownResonse(response) {
+  document.querySelector(".temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector(".city").innerHTML = "Cape Town";
+  document.querySelector(".high").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector(".low").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+  document.querySelector(".wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector(".feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+}
+
+let capeTown = document.querySelector(".cape-town");
+capeTown.addEventListener("click", clickCapeTown);
