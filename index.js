@@ -79,10 +79,12 @@ function locationTemp(response) {
     response.data.main.feels_like
   );
 }
-navigator.geolocation.getCurrentPosition(showPosition);
-
+function getPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
 let locationButton = document.querySelector(".current-location");
-locationButton.addEventListener("click", showPosition);
+locationButton.addEventListener("click", getPosition);
 
 function clickLondon(event) {
   let apiKey = "a737be22247c67dd5d6a40a70996f13d";
@@ -205,9 +207,9 @@ function clickSydney(event) {
   let city = "sydney";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-  axios.get(apiUrl).then(newYorkResonse);
+  axios.get(apiUrl).then(sydneyResonse);
 }
-function newYorkResonse(response) {
+function sydneyResonse(response) {
   document.querySelector(".temperature").innerHTML = Math.round(
     response.data.main.temp
   );
