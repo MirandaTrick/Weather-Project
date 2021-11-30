@@ -2,11 +2,14 @@
   max-width: 800px;
   margin: 20px auto;
 }
-.col-2 {
+.city-header {
   padding: 20px;
   font-weight: 700;
   font-size: 20px;
   color: #1a6ec5;
+}
+.city-header:hover {
+  cursor: pointer;
 }
 .input-group {
   padding: 20px;
@@ -58,6 +61,11 @@
 #fahrenheit-link {
   text-decoration: none;
 }
+.description {
+  font-size: 20px;
+  font-weight: 300;
+  color: #1a6ec5;
+}
 .units {
   position: relative;
   top: -34px;
@@ -83,4 +91,8 @@ footer {
 }
 .current-location {
   margin-top: 10px;
+}
+.icon {
+  position: relative;
+  top: -24px;
 }

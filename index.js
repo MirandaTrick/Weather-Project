@@ -49,6 +49,14 @@ function searchResonse(response) {
   document.querySelector(".feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  let iconImage = document.querySelector(".icon");
+  iconImage.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconImage.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
 }
 
 function showPosition(position) {
@@ -78,11 +86,20 @@ function locationTemp(response) {
   document.querySelector(".feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  let iconImage = document.querySelector(".icon");
+  iconImage.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconImage.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
 }
 function getPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+
 let locationButton = document.querySelector(".current-location");
 locationButton.addEventListener("click", getPosition);
 
@@ -110,6 +127,14 @@ function londonResonse(response) {
   document.querySelector(".feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  let iconImage = document.querySelector(".icon");
+  iconImage.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconImage.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
 }
 
 let london = document.querySelector(".london");
@@ -139,6 +164,14 @@ function newYorkResonse(response) {
   document.querySelector(".feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  let iconImage = document.querySelector(".icon");
+  iconImage.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconImage.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
 }
 
 let newYork = document.querySelector(".new-york");
@@ -168,6 +201,14 @@ function limaResonse(response) {
   document.querySelector(".feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  let iconImage = document.querySelector(".icon");
+  iconImage.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconImage.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
 }
 
 let lima = document.querySelector(".lima");
@@ -197,6 +238,14 @@ function tokyoResonse(response) {
   document.querySelector(".feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  let iconImage = document.querySelector(".icon");
+  iconImage.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconImage.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
 }
 
 let tokyo = document.querySelector(".tokyo");
@@ -226,6 +275,14 @@ function sydneyResonse(response) {
   document.querySelector(".feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  let iconImage = document.querySelector(".icon");
+  iconImage.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconImage.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
 }
 
 let sydney = document.querySelector(".sydney");
@@ -255,6 +312,14 @@ function capeTownResonse(response) {
   document.querySelector(".feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  let iconImage = document.querySelector(".icon");
+  iconImage.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconImage.setAttribute("alt", response.data.weather[0].description);
+  document.querySelector(".description").innerHTML =
+    response.data.weather[0].description;
 }
 
 let capeTown = document.querySelector(".cape-town");
