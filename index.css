@@ -55,12 +55,7 @@
   font-weight: bold;
   color: #1a6ec5;
 }
-#celsius-link {
-  text-decoration: none;
-}
-#fahrenheit-link {
-  text-decoration: none;
-}
+
 .description {
   font-size: 20px;
   font-weight: 300;
@@ -69,6 +64,16 @@
 .units {
   position: relative;
   top: -34px;
+  font-weight: lighter;
+  text-decoration: none;
+}
+.units .active {
+  text-decoration: none;
+  cursor: default;
+  font-weight: bold;
+}
+.units .active .hover {
+  text-decoration: none;
 }
 .high-low {
   font-size: 15px;
