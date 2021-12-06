@@ -113,6 +113,61 @@ function convertToCelsius(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = "";
+  forecastHTML =
+    forecastHTML +
+    `
+
+ <div class="forecast-day">Thursday</div>
+            <div class="forecast-temp">
+              <span class="forecast-temp-max">18°</span>
+              <span class="forecast-temp-min">12°</span>
+              <span class="forecast-icon">☀️</span>
+            </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+
+ <div class="forecast-day">Friday</div>
+            <div class="forecast-temp">
+              <span class="forecast-temp-max">18°</span>
+              <span class="forecast-temp-min">12°</span>
+              <span class="forecast-icon">☀️</span>
+            </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+
+ <div class="forecast-day">Saturday</div>
+            <div class="forecast-temp">
+              <span class="forecast-temp-max">18°</span>
+              <span class="forecast-temp-min">12°</span>
+              <span class="forecast-icon">☀️</span>
+            </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+
+ <div class="forecast-day">Sunday</div>
+            <div class="forecast-temp">
+              <span class="forecast-temp-max">18°</span>
+              <span class="forecast-temp-min">12°</span>
+              <span class="forecast-icon">☀️</span>
+            </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+
+ <div class="forecast-day">Monday</div>
+            <div class="forecast-temp">
+              <span class="forecast-temp-max">18°</span>
+              <span class="forecast-temp-min">12°</span>
+              <span class="forecast-icon">☀️</span>
+            </div>`;
+  forecast.innerHTML = forecastHTML;
+}
 
 let celsiusTemperature = null;
 
@@ -167,3 +222,4 @@ if (minute < 10) {
 }
 let currentDate = document.querySelector(".date");
 currentDate.innerHTML = `${day}, ${hour}:${minute} `;
+displayForecast();

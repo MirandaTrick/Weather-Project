@@ -24,7 +24,9 @@
   text-align: center;
 }
 .child-next {
-  line-height: 35px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 10px;
 }
 #search-input {
   margin: auto;
@@ -100,4 +102,18 @@ footer {
 .icon {
   position: relative;
   top: -24px;
+}
+.forecast-day {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a6ec5;
+  text-align: center;
+}
+.forecast-temp-max {
+  color: #1a6ec5;
+  font-weight: bold;
+}
+.forecast-temp-min {
+  color: #1a6ec5;
+  font-weight: 200;
 }
