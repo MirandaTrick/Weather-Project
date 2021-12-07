@@ -116,56 +116,19 @@ function convertToCelsius(event) {
 function displayForecast() {
   let forecast = document.querySelector("#forecast");
   let forecastHTML = "";
-  forecastHTML =
-    forecastHTML +
-    `
+  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
 
- <div class="forecast-day">Thursday</div>
+ <div class="forecast-day">${day}</div>
             <div class="forecast-temp">
               <span class="forecast-temp-max">18°</span>
               <span class="forecast-temp-min">12°</span>
               <span class="forecast-icon">☀️</span>
             </div>`;
-  forecastHTML =
-    forecastHTML +
-    `
-
- <div class="forecast-day">Friday</div>
-            <div class="forecast-temp">
-              <span class="forecast-temp-max">18°</span>
-              <span class="forecast-temp-min">12°</span>
-              <span class="forecast-icon">☀️</span>
-            </div>`;
-  forecastHTML =
-    forecastHTML +
-    `
-
- <div class="forecast-day">Saturday</div>
-            <div class="forecast-temp">
-              <span class="forecast-temp-max">18°</span>
-              <span class="forecast-temp-min">12°</span>
-              <span class="forecast-icon">☀️</span>
-            </div>`;
-  forecastHTML =
-    forecastHTML +
-    `
-
- <div class="forecast-day">Sunday</div>
-            <div class="forecast-temp">
-              <span class="forecast-temp-max">18°</span>
-              <span class="forecast-temp-min">12°</span>
-              <span class="forecast-icon">☀️</span>
-            </div>`;
-  forecastHTML =
-    forecastHTML +
-    `
-
- <div class="forecast-day">Monday</div>
-            <div class="forecast-temp">
-              <span class="forecast-temp-max">18°</span>
-              <span class="forecast-temp-min">12°</span>
-              <span class="forecast-icon">☀️</span>
-            </div>`;
+  });
   forecast.innerHTML = forecastHTML;
 }
 
