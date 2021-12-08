@@ -25,8 +25,10 @@ function searchResonse(response) {
   document.querySelector(".feels-like").innerHTML = Math.round(
     response.data.main.feels_like
   );
-  document.querySelector(".description").innerHTML =
-    response.data.weather[0].description;
+  let weatherDescription = document.querySelector(".description");
+
+  weatherDescription.innerHTML = response.data.weather[0].description;
+  weatherDescription.innerHTML.replace(/^\w/, (c) => c.toUpperCase());
   celsiusTemperature = response.data.main.temp;
   let iconImage = document.querySelector(".icon");
   iconImage.setAttribute(
@@ -219,3 +221,11 @@ if (minute < 10) {
 }
 let currentDate = document.querySelector(".date");
 currentDate.innerHTML = `${day}, ${hour}:${minute} `;
+
+function searchLoad(city) {
+  let apiKey = "a737be22247c67dd5d6a40a70996f13d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(searchResonse);
+}
+
+searchLoad("London");
