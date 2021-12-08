@@ -29,7 +29,7 @@
 
           <form class="search-form" id="search-form">
             <div class="row">
-              <div class="col-9">
+              <div class="col-12">
                 <input
                   type="search"
                   placeholder="Type a city.."
@@ -39,19 +39,24 @@
                   class="form-control shadow-sm"
                 />
               </div>
-              <div class="col-3">
+            </div>
+            <span class="row">
+              <span class="col-3">
                 <input
                   type="submit"
                   value="Search"
                   class="form-control btn btn-primary shadow-sm"
                 />
-              </div>
-            </div>
+              </span>
+            </span>
           </form>
+          <span>
+            <button class="current-location btn btn-primary shadow-sm">
+              Current Location
+            </button>
+          </span>
         </div>
-        <button class="current-location btn btn-primary shadow-sm">
-          Current Location
-        </button>
+
         <div class="parent">
           <div class="child-current">
             <div class="city">Location</div>
@@ -73,7 +78,7 @@
               <span class="low"> 0</span>°
             </div>
 
-            <div class="wind">Wind: <span class="wind-speed">0</span> kmph</div>
+            <div class="wind">Wind: <span class="wind-speed">0</span>km</div>
             <div class="feelslike">
               Feels like: <span class="feels-like">0</span>°
             </div>

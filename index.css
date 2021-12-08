@@ -18,7 +18,7 @@
 .parent {
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 5px;
 }
 .child-current {
   text-align: center;
@@ -30,6 +30,7 @@
 }
 #search-input {
   margin: auto;
+  margin-bottom: 5px;
   height: 40px;
   width: 100%;
   padding: 0.375 rem 0.75 rem;
@@ -40,8 +41,23 @@
   background-color: #fff;
   background-clip: padding-box;
   border: 2 px solid #ced4da;
-  border-radius: 15px;
+  border-radius: 8px;
 }
+.current-location {
+  border-radius: 5px;
+
+  margin-top: 10px;
+
+  position: relative;
+  top: -48px;
+  left: 185px;
+  padding-top: 6px;
+  padding-left: 12px;
+}
+.form-control {
+  border-radius: 5px;
+}
+
 .city {
   font-size: 50px;
   font-weight: 300;
@@ -100,9 +116,7 @@ footer {
   margin-top: 90px;
   font-size: 15px;
 }
-.current-location {
-  margin-top: 10px;
-}
+
 .icon {
   position: relative;
   top: -24px;

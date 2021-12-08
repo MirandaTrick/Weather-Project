@@ -28,7 +28,7 @@ function searchResonse(response) {
   let weatherDescription = document.querySelector(".description");
 
   weatherDescription.innerHTML = response.data.weather[0].description;
-  weatherDescription.innerHTML.replace(/^\w/, (c) => c.toUpperCase());
+
   celsiusTemperature = response.data.main.temp;
   let iconImage = document.querySelector(".icon");
   iconImage.setAttribute(
@@ -131,7 +131,7 @@ function formatDay(timestamp) {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wedneday",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
