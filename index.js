@@ -121,22 +121,47 @@ function convertToCelsius(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wedneday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data);
+  let forecastResponse = response.data.daily;
   let forecast = document.querySelector("#forecast");
   let forecastHTML = "";
-  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
 
- <div class="forecast-day">${day}</div>
+  forecastResponse.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+
+ <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
             <div class="forecast-temp">
-              <span class="forecast-temp-max">18°</span>
-              <span class="forecast-temp-min">12°</span>
-              <span class="forecast-icon">☀️</span>
+              <span class="forecast-temp-max">${Math.round(
+                forecastDay.temp.max
+              )}°</span>
+              <span class="forecast-temp-min">${Math.round(
+                forecastDay.temp.min
+              )}°</span>
+              <img class="forecast-icon" src="https://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png" 
+              width = "35" />
             </div>`;
+    }
   });
   forecast.innerHTML = forecastHTML;
 }
