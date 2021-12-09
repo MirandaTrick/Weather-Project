@@ -1,12 +1,23 @@
 .weather-app {
   max-width: 800px;
   margin: 20px auto;
+ background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  );
+}
+
+.background-heading {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/022/388/original/cloudbanner.jpeg?1639079834);
+  background-size: cover;
+  background-position-x: center;
+  padding: 30px;
+  margin: 0;
+  max-height: 300px;
 }
 .city-header {
   padding: 20px;
   font-weight: 700;
   font-size: 20px;
-  color: #1a6ec5;
+  color: white;
 }
 .city-header:hover {
   cursor: pointer;
@@ -60,7 +71,7 @@
 
 .city {
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 500;
   color: #1a6ec5;
 }
 .date {
