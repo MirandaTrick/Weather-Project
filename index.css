@@ -2,6 +2,7 @@
   max-width: 800px;
   margin: 20px auto;
   background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  font-family: poppins;
 }
 
 .background-heading {
@@ -151,9 +152,7 @@ footer {
 }
 @media (max-width: 576px) {
   .current-location {
-    position: relative;
-    top: -48px;
-    left: 80px;
+    display: none;
   }
   .search-button {
     padding: 6px 35px;
