@@ -1,8 +1,7 @@
 .weather-app {
   max-width: 800px;
   margin: 20px auto;
- background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-  );
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 .background-heading {
@@ -145,4 +144,21 @@ footer {
 .forecast-temp-min {
   color: #1a6ec5;
   font-weight: 200;
+}
+.button-flex {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  .current-location {
+    position: relative;
+    top: -48px;
+    left: 80px;
+  }
+  .search-button {
+    padding: 6px 35px;
+  }
+  .city-header {
+    font-size: 12px;
+  }
 }
